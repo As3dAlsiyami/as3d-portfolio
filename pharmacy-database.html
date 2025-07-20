@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Database for Pharmacy PowerPoint - Project Details</title>
+
+  <link href="fonts/font-awesome.min.css" rel="stylesheet" />
+  <link href="fonts/themify-icons.css" rel="stylesheet" />
+  <link href="fonts/etline.css" rel="stylesheet" />
+  <link href="css/plugins.css" rel="stylesheet" />
+  <link href="css/lightbox.min.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #001f3f;
+      color: #f0f0f0;
+      font-family: 'Open Sans', sans-serif;
+      direction: ltr;
+      padding-top: 70px;
+    }
+
+    .btn.btn-default.main_btn {
+      background-color: #1461ff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn.btn-default.main_btn:hover {
+      background-color: #0d46b3;
+    }
+
+    .sm_border {
+      background-color: white !important;
+      height: 4px;
+      width: 100px;
+      margin: 8px auto 20px auto;
+      border-radius: 3px;
+    }
+
+    .project-header {
+      background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+      color: #001f3f;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .project-header h1 {
+      color: #001f3f;
+      font-weight: 700;
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .project-header p {
+      color: #334466;
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .project-content {
+      padding: 60px 0;
+      color: #f0f0f0;
+    }
+
+    .project-section {
+      margin-bottom: 50px;
+    }
+
+    .project-section h2 {
+      color: #1461ff;
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #1461ff;
+      padding-bottom: 10px;
+    }
+
+    .project-section p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .image-item {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 250px;
+      background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+      border: 2px dashed #1461ff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1461ff;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .tech-stack {
+      background: rgba(20, 97, 255, 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+
+    .tech-stack h3 {
+      color: #1461ff;
+      margin-bottom: 20px;
+    }
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .tech-item {
+      background: #1461ff;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 10000;
+      top: 0;
+      right: 0;
+      background-color: #001f3f;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    }
+
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f0f0f0;
+      display: block;
+      transition: 0.3s;
+      border-bottom: 1px solid #1461ff;
+    }
+
+    .sidebar a:hover {
+      color: #1461ff;
+      background-color: rgba(20, 97, 255, 0.1);
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    .sidebar .closebtn:hover {
+      color: #1461ff;
+    }
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: rgba(0, 31, 63, 0.9);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 10001;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      border: 2px solid #1461ff;
+    }
+
+    .openbtn:hover {
+      background-color: rgba(20, 97, 255, 0.9);
+      transform: scale(1.05);
+    }
+
+    .main_menu {
+      display: none;
+    }
+
+    .sidebar a i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+   
+    .fixed-back-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 9999;
+      background-color: #1461ff;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+   
+    .fixed-back-btn:hover {
+      background-color: #0d4bb3;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preloader">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default navbar-fixed-top menu-top">
+    <div class="container">
+      <div class="logo"><div class="mobile-nav"></div></div>
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <div class="main_menu" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="my-project.html">My Project</a></li>
+          <li><a href="education.html">My Education</a></li>
+          <li><a href="experience.html">My Practical Skills</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+    <a href="about.html"><i class="fa fa-user"></i> About Me</a>
+    <a href="my-project.html"><i class="fa fa-briefcase"></i> My Project</a>
+    <a href="education.html"><i class="fa fa-graduation-cap"></i> My Education</a>
+    <a href="experience.html"><i class="fa fa-cogs"></i> My Practical Skills</a>
+    <a href="contact.html"><i class="fa fa-envelope"></i> Contact Me</a>
+  </div>
+
+  <section class="project-header">
+    <div class="container">
+      <h1>Database for Pharmacy PowerPoint</h1>
+      <div class="sm_border"></div>
+      <p>A comprehensive database management system designed specifically for pharmacy operations, presented through an interactive PowerPoint presentation.</p>
+    </div>
+  </section>
+
+  <section class="project-content">
+    <div class="container">
+      <div class="project-section">
+        <h2>Project Overview</h2>
+        <p>This project presents a complete database solution for pharmacy management, including inventory tracking, patient records, prescription management, and sales analytics. The system is designed to streamline pharmacy operations and improve efficiency.</p>
+        
+      </div>
+
+      <div class="project-section">
+        <h2>Project Screenshots</h2>
+        <p>Below are screenshots from the PowerPoint presentation showing different aspects of the pharmacy database system:</p>
+        
+        <div class="image-gallery">
+          <div class="image-item">
+            <img src="images/database-p.png" alt="Slide 1: Title Page" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+            <p>Project introduction and overview</p>
+          </div>
+          
+          <div class="image-item">
+            <img src="images/database1.png" alt="Slide 1: Title Page" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+            <p>Database requirements and goals</p>
+          </div>
+          
+          <div class="image-item">
+            <img src="images/database2.png" alt="Slide 2: Database Schema" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+            <p>Entity Relationship Diagram</p>
+          </div>
+          
+          <div class="image-item">
+            <img src="images/database3.png" alt="Slide 3: Tables Design" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+            <p>Database tables structure</p>
+          </div>
+          
+          <div class="image-item">
+            <img src="images/database4.png" alt="Slide 4: Queries" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+            <p>SQL queries and operations</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Key Features</h2>
+        <ul style="font-size: 16px; line-height: 1.8; margin-left: 20px;">
+          <li>Complete inventory management system</li>
+          <li>Patient records and prescription tracking</li>
+          <li>Sales and billing management</li>
+          <li>Automated stock alerts</li>
+          <li>Comprehensive reporting system</li>
+          <li>User-friendly interface design</li>
+          <li>Data security and backup features</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Project Impact</h2>
+        <p>This database system demonstrates advanced understanding of database design principles, SQL implementation, and practical application in real-world scenarios. The PowerPoint presentation effectively communicates complex technical concepts in an accessible format.</p>
+      </div>
+    </div>
+  </section>
+
+  <a href="my-project.html" class="fixed-back-btn">Back to Projects</a>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/modernizr-2.8.3.min.js"></script>
+  <script src="js/jquery.nav.js"></script>
+  <script src="js/jquery.inview.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/animated-headline.js"></script>
+  <script src="js/jquery.ripples-min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script src="js/slick-nav.js"></script>
+  <script src="js/scrolltopcontrol.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("mySidebar").style.left = "auto";
+      document.getElementById("mySidebar").style.right = "0";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("mySidebar").style.right = "-250px";
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html> 

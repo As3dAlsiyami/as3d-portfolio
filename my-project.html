@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Projects - As3d Alsiyami</title>
+
+  <link href="fonts/font-awesome.min.css" rel="stylesheet" />
+  <link href="fonts/themify-icons.css" rel="stylesheet" />
+  <link href="fonts/etline.css" rel="stylesheet" />
+  <link href="css/plugins.css" rel="stylesheet" />
+  <link href="css/lightbox.min.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #001f3f;
+      color: #f0f0f0;
+      font-family: 'Open Sans', sans-serif;
+      direction: ltr;
+      padding-top: 70px;
+    }
+
+    .btn.btn-default.main_btn {
+      background-color: #1461ff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn.btn-default.main_btn:hover {
+      background-color: #0d46b3;
+    }
+
+    .sm_border {
+      background-color: white !important;
+      height: 4px;
+      width: 100px;
+      margin: 8px auto 20px auto;
+      border-radius: 3px;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+      color: white;
+      font-weight: 600;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover {
+      color: #1461ff;
+    }
+
+    #service {
+      background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+      color: #001f3f;
+      padding: 60px 0;
+      direction: ltr;
+    }
+
+    #service .section_heading strong {
+      color: #1461ff;
+      font-weight: 700;
+      font-size: 20px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    #service .section_heading h2 {
+      color: #001f3f;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    #service .section_heading p {
+      color: #334466;
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .single-service {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+      color: #001f3f;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .single-service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .single-service img {
+      border: 8px solid #1461ff;
+      border-radius: 12px;
+      width: 100%;
+      margin-bottom: 15px;
+      flex-shrink: 0;
+    }
+
+    .single-service h4 {
+      font-weight: 700;
+      color: #1461ff;
+      margin-bottom: 15px;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .single-service i {
+      color: #1461ff;
+      font-size: 28px;
+      margin-bottom: 15px;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .single-service p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #334466;
+      flex-grow: 1;
+      margin-bottom: 15px;
+    }
+
+    .single-service .btn {
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 10000;
+      top: 0;
+      right: 0;
+      background-color: #001f3f;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    }
+
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f0f0f0;
+      display: block;
+      transition: 0.3s;
+      border-bottom: 1px solid #1461ff;
+    }
+
+    .sidebar a:hover {
+      color: #1461ff;
+      background-color: rgba(20, 97, 255, 0.1);
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    .sidebar .closebtn:hover {
+      color: #1461ff;
+    }
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: rgba(0, 31, 63, 0.9);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 10001;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      border: 2px solid #1461ff;
+    }
+
+    .openbtn:hover {
+      background-color: rgba(20, 97, 255, 0.9);
+      transform: scale(1.05);
+    }
+
+    .main_menu {
+      display: none;
+    }
+
+    .sidebar a i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preloader">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default navbar-fixed-top menu-top">
+    <div class="container">
+      <div class="logo"><div class="mobile-nav"></div></div>
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <div class="main_menu" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="my-project.html">My Project</a></li>
+          <li><a href="education.html">My Education</a></li>
+          <li><a href="experience.html">My Practical Skills</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+    <a href="about.html"><i class="fa fa-user"></i> About Me</a>
+    <a href="my-project.html"><i class="fa fa-briefcase"></i> My Project</a>
+    <a href="education.html"><i class="fa fa-graduation-cap"></i> My Education</a>
+    <a href="experience.html"><i class="fa fa-cogs"></i> My Practical Skills</a>
+    <a href="contact.html"><i class="fa fa-envelope"></i> Contact Me</a>
+  </div>
+
+  <section class="gray_bg section_padding pb_70" id="service">
+    <div class="container">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section_heading text-center">
+          <strong>What We Do</strong>
+          <h2>My Projects</h2>
+          <div class="sm_border"></div>
+          <p>My graduation project, smart parking, was worked on by 6 people. I worked on the entire model of the project. The project took a month to complete the model and 3 weeks to finish programming.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="single-service">
+            <i class="icon-mobile"></i>
+            <h4>Smart Parking System</h4>
+            <img alt="project-image" style="border: 10px solid #1461ff;" src="images/project1.jpg" />
+            <p>The project components include ESP32, LEDs, servo motors, IR sensor combined with ultrasonic sensor, and was programmed using Arduino IDE in C++.</p>
+            <a href="documents/Project-Report.pdf" target="_blank" class="btn btn-default main_btn" style="margin-top: 10px;">
+              Download Project
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="single-service">
+            <i class="icon-mobile"></i>
+            <h4>Database for Pharmacy PowerPoint</h4>
+            <img alt="database-project" style="border: 10px solid #1461ff; width: 100%; height: 300px; object-fit: cover;" src="images/database-p.png" />
+            <p>Responsive website development using HTML, CSS, JavaScript and modern web technologies.</p>
+            <a href="pharmacy-database.html" class="btn btn-default main_btn" style="margin-top: 10px; margin-left: 10px; background-color: #28a745;">
+              View More
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="single-service">
+            <i class="icon-mobile"></i>
+            <h4>Mobile App</h4>
+            <img alt="mobile-app" style="border: 10px solid #1461ff;" src="images/mobile-app.jpg" />
+            <p>Developed mobile applications for Android platform using modern development tools and user-centered design principles.</p>
+            <a href="#" class="btn btn-default main_btn" style="margin-top: 10px;">
+              Download Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="index.html" class="btn btn-default main_btn" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">Back to Home Page</a>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/modernizr-2.8.3.min.js"></script>
+  <script src="js/jquery.nav.js"></script>
+  <script src="js/jquery.inview.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/animated-headline.js"></script>
+  <script src="js/jquery.ripples-min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script src="js/slick-nav.js"></script>
+  <script src="js/scrolltopcontrol.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("mySidebar").style.left = "auto";
+      document.getElementById("mySidebar").style.right = "0";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("mySidebar").style.right = "-250px";
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html> 

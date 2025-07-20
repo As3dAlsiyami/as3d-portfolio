@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asaad Alsiyami</title>
+
+  <link href="fonts/font-awesome.min.css" rel="stylesheet" />
+  <link href="fonts/themify-icons.css" rel="stylesheet" />
+  <link href="fonts/etline.css" rel="stylesheet" />
+  <link href="css/plugins.css" rel="stylesheet" />
+  <link href="css/lightbox.min.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #001f3f;
+      color: #f0f0f0;
+      font-family: 'Open Sans', sans-serif;
+      direction: ltr;
+      padding-top: 70px;
+    }
+
+    .about_content_area h4,
+    .about_content_area h3 {
+      color: white;
+    }
+
+    .ct_about_details,
+    .ct_about {
+      background-color: rgba(173, 216, 230, 0.9);
+      color: #001f3f;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .btn.btn-default.main_btn {
+      background-color: #1461ff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn.btn-default.main_btn:hover {
+      background-color: #0d46b3;
+    }
+
+
+    
+
+    .sm_border {
+      background-color: white !important;
+      height: 4px;
+      width: 100px;
+      margin: 8px auto 20px auto;
+      border-radius: 3px;
+    }
+
+    .about_details span,
+    .about_details i {
+      color: #001f3f;
+      font-weight: 600;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+      color: white;
+      font-weight: 600;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover {
+      color: #1461ff;
+    }
+
+    footer,
+    .footer {
+      color: #ccc;
+    }
+
+    #service {
+      background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+      color: #001f3f;
+      padding: 60px 0;
+      direction: ltr;
+    }
+
+    #service .section_heading strong {
+      color: #1461ff;
+      font-weight: 700;
+      font-size: 20px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    #service .section_heading h2 {
+      color: #001f3f;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    #service .section_heading p {
+      color: #334466;
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .single-service {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+      color: #001f3f;
+    }
+
+    .single-service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .single-service img {
+      border: 8px solid #1461ff;
+      border-radius: 12px;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .single-service h4 {
+      font-weight: 700;
+      color: #1461ff;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .single-service i {
+      color: #1461ff;
+      font-size: 28px;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .single-service p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #334466;
+    }
+    .blue_bar {
+      width: 1110px;
+      height: 36px;
+      background: #1461ff;
+      margin: 0 auto 18px auto;
+      border-radius: 8px;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 10000;
+      top: 0;
+      right: 0;
+      background-color: #001f3f;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    }
+
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f0f0f0;
+      display: block;
+      transition: 0.3s;
+      border-bottom: 1px solid #1461ff;
+    }
+
+    .sidebar a:hover {
+      color: #1461ff;
+      background-color: rgba(20, 97, 255, 0.1);
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    .sidebar .closebtn:hover {
+      color: #1461ff;
+    }
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: rgba(0, 31, 63, 0.9);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 10001;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      border: 2px solid #1461ff;
+    }
+
+    .openbtn:hover {
+      background-color: rgba(20, 97, 255, 0.9);
+      transform: scale(1.05);
+    }
+
+    .main_menu {
+      display: none;
+    }
+    .sidebar a i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preloader">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default navbar-fixed-top menu-top">
+    <div class="container">
+      <div class="logo"><div class="mobile-nav"></div></div>
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <div class="main_menu" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="my-project.html">My Project</a></li>
+          <li><a href="education.html">My Education</a></li>
+          <li><a href="experience.html">My Practical Skills</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+    <a href="about.html"><i class="fa fa-user"></i> About Me</a>
+    <a href="my-project.html"><i class="fa fa-briefcase"></i> My Project</a>
+    <a href="education.html"><i class="fa fa-graduation-cap"></i> My Education</a>
+    <a href="experience.html"><i class="fa fa-cogs"></i> My Practical Skills</a>
+    <a href="contact.html"><i class="fa fa-envelope"></i> Contact Me</a>
+  </div>
+
+  <section class="main_banner banner_bg ripple-effect jquery-ripples" id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-sm-12 col-xs-12">
+          <div class="banner_content">
+            <strong>Hello!</strong>
+            <h1 class="cd-headline clip">
+              <span class="fw_600">I Am</span>
+              <span class="cd-words-wrapper">
+                <b class="is-visible fw_300">As3d Alsiyami</b>
+                <b class="fw_300">Web Designer</b>
+              </span>
+            </h1>
+            <p>I'm a Web Developer with over 3 years of experience. My expertise includes website creation, graphic design, business cards, and more...</p>
+            <ul class="banner_social_link">
+              <li>
+                <a href="https://www.instagram.com/aisieal0" target="_blank">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/Asaad-Alsiyami-277b7a2b7" target="_blank">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+              <li> 
+                    <a href="https://github.com/Asaad-Alsiyami" target="_blank">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                  
+                </a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+        <div class="col-md-5 col-sm-12 col-xs-12"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section_padding" id="about">
+    <div class="container">
+      <div class="single_about">
+        <div class="row">
+          <div class="col-md-5 col-sm-5 col-xs-12">
+            <div class="about_image">
+              <img alt="about-image" style="border: 10px solid #1461ff;" src="images/AAA.jpg" />
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-7 col-xs-12">
+            <div class="text-center">
+              <h4 style="color: white; display: inline-block;">About Me</h4>
+              <div class="sm_border"></div>
+            </div>
+            <h3>I am a junior web developer with 3 years of experience working on HTML, XML, Databases, Android Studio, SQL and web servers..</h3>
+            <a class="btn btn-default main_btn" href="images/CV013 English .pdf" target="_blank">Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section_padding"
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="section_heading text-center">
+            <h2>Send a Message</h2>
+            <div class="sm_border"></div>
+          </div>
+          <form id="contactForm" style="background:rgba(255,255,255,0.9);padding:30px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);color:#001f3f;">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-default main_btn">Send Message</button>
+            
+                        
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/modernizr-2.8.3.min.js"></script>
+  <script src="js/jquery.nav.js"></script>
+  <script src="js/jquery.inview.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/animated-headline.js"></script>
+  <script src="js/jquery.ripples-min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script src="js/slick-nav.js"></script>
+  <!-- <script src="js/form-contact.js"></script> -->
+  <script src="js/scrolltopcontrol.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("mySidebar").style.left = "auto";
+      document.getElementById("mySidebar").style.right = "0";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("mySidebar").style.right = "-250px";
+    }
+  </script>
+  <script src="js/main.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+    import { getFirestore, collection, addDoc,Timestamp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+    
+;
+  const firebaseConfig = {
+      apiKey: "AIzaSyCz70N3eqXoRzkKSGP-j7Ndnc3SQagj3kA",
+      authDomain: "as3d-alsiyami.firebaseapp.com",
+      projectId: "as3d-alsiyami",
+      storageBucket: "as3d-alsiyami.firebasestorage.app",
+      messagingSenderId: "231859435332",
+      appId: "1:231859435332:web:a30afdb566f711a6e88911",
+      measurementId: "G-6PX7XXQZZ9"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore();
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault(); 
+      
+      console.log("Form submitted");
+
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+        phone: form.phone.value,
+        timestamp: Timestamp.now(),
+      };
+      const modal = document.getElementById("thankYouModal");
+modal.style.display = "block";
+
+// إعادة تهيئة الفورم
+form.reset();
+document.getElementById("closeModalBtn").addEventListener("click", () => {
+  document.getElementById("thankYouModal").style.display = "none";
+});
+
+      try {
+        await addDoc(collection(db, "contact-me"), data);
+        const successMsg = document.getElementById("successMessage");
+successMsg.style.display = "block";
+
+form.reset();
+
+setTimeout(() => {
+  successMsg.style.display = "none";
+}, 10000);
+        form.reset();
+      } catch (error) {
+        console.error("Error adding document: ", error);
+      }
+    });
+  });
+</script>
+<div id="thankYouModal" style="display:none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; 
+background-color: rgba(0,0,0,0.5); text-align: center;">
+  <div style="background: white; border-radius: 10px; width: 300px; margin: 15% auto; padding: 20px; color: #001f3f; font-weight: bold;">
+    <p>تم إرسال رسالتك بنجاح، شكرًا لتواصلك معنا.</p>
+    <button id="closeModalBtn" style="background: #1461ff; border: none; padding: 10px 20px; color: white; border-radius: 6px; cursor: pointer;">إغلاق</button>
+  </div>
+</div>
+</body>
+</html>
